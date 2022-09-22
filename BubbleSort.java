@@ -1,19 +1,22 @@
 package org.example;
 
-class BubbleSort {
-    public void bubbleSortMethod(int[] array) {
-        for (int i = 0; i < array.length - 1; i++)
-            for (int j = 0; j < array.length - 1; j++)
-                if (array[j] > array[j + 1]) {
-                    int temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
-                }
-    }
-    public void printArray(int[] array) {
-        for (int i = 0; i < array.length; ++i)
-            System.out.print(array[i] + " ");
-        System.out.println();
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args)
+    {
+        BubbleSort bubbleSort = new BubbleSort();
+        Random random = new Random();
+        int[] array = new int[10];
+
+            for(int i=0;i<10;i++) {
+                array[i]=random.nextInt(100);
+                System.out.println(array[i]);
+            }
+
+        bubbleSort.bubbleSortMethod(array);
+        
+        System.out.println("Sorted array");
+        bubbleSort.printArray(array);
     }
 }
-
