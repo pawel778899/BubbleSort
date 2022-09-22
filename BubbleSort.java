@@ -7,9 +7,9 @@ public class Main {
     {
         BubbleSort bubbleSort = new BubbleSort();
         Random random = new Random();
-        int[] array = new int[10];
+        int[] array = new int[100];
 
-            for(int i=0;i<10;i++) {
+            for(int i=0;i<100;i++) {
                 array[i]=random.nextInt(100);
                 System.out.println(array[i]);
             }
